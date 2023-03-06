@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main>
+    <picture>
+      <source media="(min-width: 991px)" srcset="images/bg-main-desktop.png" />
+      <img src="images/bg-main-mobile.png" alt="Interactive card details form background" class="background-app" />
+    </picture>
+    <section class="interactive-card">
+      <div class="interactive-card__cards">
+        <div class="front-card">
+          <img src="images/bg-card-front.png" alt="card front" class="front-card__img img-cover">
+          <img src="images/card-logo.svg" alt="card logo" class="front-card__logo">
+          <span class="front-card__number">0000 0000 0000 0000</span>
+          <span class="front-card__name">Jane Appleseed</span>
+          <span class="front-card__exp-date">00/00</span>
+        </div>
+        <div class="back-card">
+          <img src="images/bg-card-back.png" alt="card front" class="back-card__img img-cover">
+          <span class="back-card__cvc">000</span>
+        </div>
+      </div>
+      <div class="interactive-card__form">
+        <div class="card-form">
+          <label class="form-control">
+            <span class="form-control__label">Cardholder Name</span>
+            <input type="text" placeholder="e.g. Jane Appleseed" id="cardholder-name">
+            <span class="error"></span>
+          </label>
+          <label class="form-control">
+            <span class="form-control__label">Card number</span>
+            <input type="text" placeholder="e.g. 1234 5678 9123 0000" id="card-number" maxlength="19">
+            <span class="error"></span>
+          </label>
+          <div class="form-card__bottom">
+            <fieldset class="form-control form-control-date">
+              <legend class="form-control__label">Exp. date (mm/yy)</legend>
+              <div class="dates" id="card-date">
+                <input type="text" placeholder="MM" id="card-month" maxlength="2">
+                <input type="text" placeholder="YY" id="card-year" maxlength="2">
+              </div>
+              <span class="error"></span>
+            </fieldset>
+            <label class="form-control form-control-cvc">
+              <span class="form-control__label">CVC</span>
+              <input type="text" placeholder="e.g. 123" id="card-cvc" maxlength="3">
+              <span class="error"></span>
+            </label>
+          </div>
+          <button class="card-form__button" id="confirm-button">Confirm</button>
+        </div>
+        <article class="card-form-success">
+          <svg class="card-form-success__svg" width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="40" fill="url(#a)" />
+            <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3" />
+            <defs>
+              <linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6348FE" />
+                <stop offset="1" stop-color="#610595" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <h2 class="card-form-success__heading">Thank you!</h2>
+          <p class="card-form-success__lead">We've added your card details</p>
+          <button class="card-form__button" id="continue-button">Continue</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
