@@ -7,3 +7,5 @@ A simple application that retrieves data from the form and injects them into the
 The project was made for the challenge from the frontendmentor.
 
 https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw
+
+Solution: https://rafal-pixel.github.io/interactive-card/
